@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js"></script> -->
+    <title>Document</title>
+  </head>
+  <body class="center">
+    <h3>Password Generator</h3>
+    <div class="pasw">
+      <p id="password">suggested password</p>
+      <!-- <input type="text" placeholder="suggested password" /> -->
+      <div class="divimg">
+        <span id="copied"></span
+        ><img src="./images/icon-copy.svg" alt="copy" srcset="" id="forcopy" />
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="forslider">
+        <h4>Character Length</h4>
+        <p id="sliderv">0</p>
+      </div>
+
+      <input
+        type="range"
+        min="0"
+        max="20"
+        value="0"
+        class="slider"
+        id="myRange"
+      />
+      <div class="chboxes">
+        <!-- <input type="checkbox" id="upcase" name="upcase" value="upcase" />
+        <label for="upcase"> Include Uppercase Letters</label><br /> -->
+
+        <label class="main"
+          >Include Uppercase Letters
+          <input type="checkbox" class="checkbox" id="upcase" />
+          <span class="geekmark"></span>
+        </label>
+
+        <label class="main"
+          >Include Lowercase Letters
+          <input type="checkbox" class="checkbox" id="lowercase" />
+          <span class="geekmark"></span>
+        </label>
+
+        <label class="main">
+          Include Numbers
+          <input type="checkbox" class="checkbox" id="nums" />
+          <span class="geekmark"></span>
+        </label>
+        <label class="main">
+          Include Symbols
+          <input type="checkbox" class="checkbox" id="symbols" />
+          <span class="geekmark"></span>
+        </label>
+      </div>
+
+      <div class="wraper">
+        <p>STRENGTH</p>
+        <div class="swithbars">
+          <p id="strength"></p>
+          <div class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" onClick="genPas()">
+        GENERATE &#160;&#160;<img
+          src="./images/icon-arrow-right.svg"
+          alt="arrow right"
+        />
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

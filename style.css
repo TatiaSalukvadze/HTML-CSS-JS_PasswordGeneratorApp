@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --Neon-Green: #A4FFAF;
+}
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    min-height:100vh;
+    flex-direction: column;
+    background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+    font-family: 'JetBrains Mono', monospace;
+}
+h3{
+    color: #817D92;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+    margin-top:64px;
+}
+.pasw{
+    width: 343px;
+        height: 64px;
+        background: #24232C;
+    color: #E6E5EA;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 14px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pasw p{
+        padding-left:16px;
+    }
+  .pasw .divimg {
+      margin-right: 15px;
+      display:flex;
+      align-items: center;
+      gap:4px;
+  }
+  #copied{
+    color: var(--Neon-Green);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-weight: 700;
+  }
+.form{
+    width: 343px;
+        height: 423px;
+        background: #24232C;
+        margin-top: 16px;
+        padding:16px;
+        position:relative;
+}
+.forslider{
+    margin-top:5px;
+    margin-bottom:13px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:32px;
+}
+#sliderv{
+    color: var(--Neon-Green);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 24px;
+        font-weight: 700;
+}
+.forslider h4{
+    color: #E6E5EA;
+        font-size: 16px;
+        font-weight: 700;
+}
+/* ///////////////// */
+.slider {
+    -webkit-appearance: none;
+    width: 311px;
+        height: 8px;
+    background: #18171F;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+        height: 28px;
+    position: relative;
+    cursor: pointer;
+    background: #E6E5EA;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 28px;
+        height: 28px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    background: #E6E5EA;
+    border-radius: 50%;
+}
+
+.slider::before {
+    content: '';
+    width: calc((311px - 28px) * var(--value)); 
+    height: 8px;
+    background-color: var(--Neon-Green);
+    border-radius: 5px;
+    position: absolute;
+    top: 75px;
+    left: 16px;
+}
+
+/* //////////////////// */ 
+.chboxes{
+    margin-top:32px;
+    color: var(--Almost-White, #E6E5EA);
+        font-feature-settings: 'clig' off, 'liga' off;
+
+    font-size: 16px;
+        font-weight: 700;
+}
+.main {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* Hide the default checkbox */
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+/* Creating a custom checkbox
+        based on demand */
+.geekmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+        height: 20px;
+        border: 2px solid var(--Almost-White, #E6E5EA);
+    /* background-color: black; */
+}
+
+
+
+/* Specify the background color to be
+        shown when checkbox is checked */
+.main input:checked~.geekmark {
+    background-color:var(--Neon-Green);
+    border:0;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.geekmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Display checkmark when checked */
+.main input:checked~.geekmark:after {
+    display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+        showing only two border to make it look
+        like a tickmark */
+.main .geekmark:after {
+    left: 6px;
+    bottom: 3px;
+    width: 2.5px;
+    height: 10px;
+    border: solid  #24232C;;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* /////////////////////// */
+.wraper{
+    margin-top:32px;
+    width: 311px;
+        height: 56px;
+        background: #18171F;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+}
+.wraper>p{
+    color: var(--Grey, #817D92);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        padding-left:16px;
+}
+.bars{
+    display:flex;
+    gap:8px;
+    margin-right:14px;
+}
+.bar{
+    width: 10px;
+        height: 28px;
+        border: 2px solid var(--Almost-White, #E6E5EA);
+}
+
+.swithbars{
+    display: flex;
+    gap:16px;
+    align-items: center;
+}
+#strength{
+    color:  #E6E5EA;
+        text-align: right;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 18px;
+        font-weight: 700;
+}
+
+button{
+    margin-top:16px;
+    width: 311px;
+        height: 56px;
+        background: var(--Neon-Green);
+        border:0;
+        color: var(--Dark-Grey, #24232C);
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            font-weight: 700;
+}
+
+@media (min-width:1400px){
+    h3 {
+            font-size: 24px;
+            margin-top: 133px;
+        }
+    
+        .pasw {
+            width: 540px;
+                height: 80px;   
+        font-size: 32px;
+            margin-top: 30px;
+            padding:19px;
+        }
+    
+        .pasw p {
+            padding-left: 13px;
+        }
+    
+        .pasw .divimg {
+            margin-right: 17px;
+        }
+    
+        .form {
+            width: 540px;
+                height: 528px;
+            margin-top: 24px;
+            padding: 32px;
+        }
+    
+        .forslider {
+            margin-top: 2px;
+            margin-bottom: 25px;      
+            height: 43px;
+        }
+    
+        #sliderv {
+           font-size: 32px;
+        }
+    
+        .forslider h4 {
+           font-size: 18px;
+        }
+    
+        /* ///////////////// */
+        .slider {
+            width: 476px;
+        }
+    
+    
+    
+        .slider::before { 
+            width: calc((476px - 28px) * var(--value));
+            top: 110px;
+            left: 32px;
+        }
+
+        .chboxes {
+            margin-top: 32px;
+            font-size: 18px;
+        }
+    
+    
+        .wraper {
+            margin-top: 35px;
+            width: 476px;
+                height: 72px;
+        }
+    
+        .wraper>p {
+            font-size: 18px;
+            font-weight: 700;
+            padding-left: 32px;
+        }
+    
+        .bars {
+            margin-right: 32px;
+        }
+
+        #strength {
+            font-size: 24px;
+        }
+    
+        button {
+            margin-top: 32px;
+        width: 476px;
+            height: 65px;
+           font-size: 18px;
+        }
+}
